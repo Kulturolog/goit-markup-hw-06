@@ -742,7 +742,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .modal-input {
   width: 100%;
@@ -763,4 +763,32 @@ address {
 .modal-label:nth-child(n + 2) {
   display: block;
   margin-top: 10px;
+}
+.modal-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+  padding-top: 16px;
+}
+.checkbox-input {
+  width: 16px;
+  height: 15px;
+  background: var(--rubric-color);
+}
+.checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+.checkbox-text {
 }
