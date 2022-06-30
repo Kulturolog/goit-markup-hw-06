@@ -654,7 +654,7 @@ address {
   border-radius: 4px;
 }
 .subscription-button {
-  width: 185px;
+  width: 155px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -668,6 +668,9 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.subscription-button svg {
+  margin-left: 10px;
 }
 .subscription-input::placeholder {
   font-weight: 400;
@@ -721,6 +724,7 @@ address {
   padding: 40px;
 }
 .modal-close {
+  display: flex;
   position: absolute;
   right: 8px;
   top: 8px;
@@ -732,6 +736,10 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.modal-button:focus,
+.modal-button:hover {
+  fill: var(--brand-color);
 }
 .is-hidden {
   opacity: 0;
@@ -753,6 +761,13 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
+}
+.modal-input:focus {
+  border-color: var(--brand-color);
+}
+.modal-input:focus + .modal-icon {
+  fill: var(--brand-color);
 }
 .modal-label {
   display: block;
@@ -767,6 +782,11 @@ address {
   display: block;
   margin-top: 10px;
 }
+input[type='name'],
+[type='tel'],
+[type='email'] {
+  padding-left: 42px;
+}
 .input-wrap {
   position: relative;
 }
@@ -778,25 +798,25 @@ address {
 }
 .modal-textarea::placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 16px;
   width: 100%;
   height: 120px;
   resize: none;
+  background-color: transparent;
+  outline: transparent;
 }
-.checkbox-input {
-  width: 16px;
-  height: 15px;
-  background: var(--rubric-color);
+.modal-textarea:focus {
+  border-color: var(--brand-color);
 }
 .checkbox-label {
   font-weight: 400;
@@ -804,4 +824,60 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+.checkbox-label a {
+  color: var(--brand-color);
+}
+.checkbox-label span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--rubric-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-icon {
+  fill: transparent;
+}
+.checkbox-input:checked + .checkbox-label span {
+  background-color: var(--brand-color);
+  border: none;
+}
+.checkbox-input:checked + .checkbox-label .check-icon {
+  fill: var(--layout-background-color);
+}
+.modal-checkbox {
+  margin-bottom: 30px;
+  margin-left: 14px;
+}
+.button-send {
+  min-width: 200px;
+  padding: 10px 55px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: block;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--layout-background-color);
+  background-color: var(--brand-color);
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-send:hover,
+.button-send:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--button-color);
 }
