@@ -654,7 +654,7 @@ address {
   border-radius: 4px;
 }
 .subscription-button {
-  width: 155px;
+  min-width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -665,6 +665,19 @@ address {
   border-radius: 4px;
   color: var(--layout-background-color);
   border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscription-button:hover,
+.subscription-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--button-color);
+}
+.subscription-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -740,6 +753,7 @@ address {
 .modal-button:focus,
 .modal-button:hover {
   fill: var(--brand-color);
+  cursor: pointer;
 }
 .is-hidden {
   opacity: 0;
@@ -782,9 +796,7 @@ address {
   display: block;
   margin-top: 10px;
 }
-input[type='name'],
-[type='tel'],
-[type='email'] {
+.modal-input {
   padding-left: 42px;
 }
 .input-wrap {
